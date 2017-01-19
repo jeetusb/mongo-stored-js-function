@@ -1,4 +1,4 @@
-# mongo-stored-js-function
+# mongo-stored-js-functions
 
 # Usage
 
