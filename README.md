@@ -14,5 +14,5 @@
 * Call function by name
 
 ```
-    collectionCount()
+   collectionCount()
 ```
