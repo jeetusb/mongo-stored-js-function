@@ -16,3 +16,23 @@ db.system.js.save(
         }
     }
 )
+
+//print all collections with their respective dbs.
+db.system.js.save(
+{
+	_id:"printAllCollections",
+	value:function()
+	{
+		var dbs = db.adminCommand('listDatabases');
+		for(i=0; i < dbs.databases.length; i++)
+		{
+			mydb = dbs['databases'][i]['name'];
+			mydbcon = db.getSiblingDB(mydb)
+			var colls = mydbcon.getCollectionNames()
+			for(var j=0; j < colls.length; j++)
+			{
+				print(mydb + ' - ' + colls[j])
+			}
+		}
+	}
+})
